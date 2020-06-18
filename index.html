@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>   
+        <link rel="stylesheet" href="style.css">  
+    </head>
+    <body>
+        <div class = "container">
+            <div class="grid-container" id="_gridCon">
+                    <label class = "grid-item label lnom" for="">Nombres</label>
+                    <label class = "grid-item label lap" for="">Apellido Paterno</label>
+                    <label class = "grid-item label lam" for="">Apellido Materno</label>
+                    <label class = "grid-item label ldir" for="">Direccion</label>
+                    <label class = "grid-item label lreg" for="">Region</label>
+                    <label class = "grid-item label lprov" for="">Provincia</label>
+                    <label class = "grid-item label lcom" for="">Comuna</label>
+                    <input class = "grid-item input nom" id="_nom" type="text" onkeypress="return /[a-z, ]/i.test(event.key)" required>
+                    <input class = "grid-item input ap" id="_ap" type="text" onkeypress="return /[a-z, ]/i.test(event.key)" required>
+                    <input class = "grid-item input am" id="_am"type="text" onkeypress="return /[a-z, ]/i.test(event.key)" required>
+                    <input class = "grid-item input dir" id="_dir" type="text" required>
+                    <select class = "grid-item selector reg" id="S1" name="Regiones" onchange="jsFunction()"></select>
+                    <select class = "grid-item selector prov" id="S2" name="Provincias" onchange="jsFunction2()"></select>
+                    <select class = "grid-item selector com" id="S3" name="Comunas"></select>
+                    <label class="Test" for="">Test</label>
+                    <label class="Test" for="">Test</label>
+                    <label class="Test" for="">Test</label>
+                    <button class="boton" id="btn" onclick="getInput()">Agregar</button>
+                    <button class="boton" id="eBtn" onclick="eliminar()">Eliminar</button>
+            </div>
+            <table id = "_liCon">
+                <tr>
+                    <th><label class = "list-item" for="">Nombres</label></th>
+                    <th><label class = "list-item" for="">Apellido Paterno</label></th>
+                    <th><label class = "list-item" for="">Apellido Materno</label></th>
+                    <th><label class = "list-item" for="">Direccion</label></th>
+                    <th><label class = "list-item" for="">Region</label></th>
+                    <th><label class = "list-item" for="">Provincia</label></th>
+                    <th><label class = "list-item" for="">Comuna</label></th>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
